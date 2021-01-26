@@ -80,7 +80,7 @@ At this point, I recommend you complete the first Chapter of the Introduction to
 
 When you are logged into a shell, you should have a prompt. This is a line of text ending with a dollar symbol and a space $ . Many systems are configured to present more information on this prompt line for convenience. Our compute server by default shows the current user, the name of the system, and the current working directory! When you log in, you will see something like this on the last line:
 
-```
+```bash
 jgoodson@compute-1:~$ 
 ```
 
@@ -88,7 +88,7 @@ This first tells you what use you are, in this case "jgoodson". This use is at/o
 
 As a convention, throughout the rest of this training and future modules, I will tell you to run certain commands. I will format them like so:
 
-```
+```bash =
 $ pwd
 ```
 
@@ -98,7 +98,7 @@ Go ahead and enter the `pwd` command. This stands for **p**rint **w**orking *
 
 Since we've talked so much about being in a particular place, there must be a way to move around, to change where you are. The primary command for moving around on Unix systems is `c`d or change directory. This is a simple command that usually takes a single argument, a path where we want to move to. In this case, we should run the following command to move to a prepared toy directory that will be used for the rest of this section
 
-```
+```bash
 $ cd /shared/module1
 ```
 
@@ -112,7 +112,7 @@ To look around and see what files and folders are in a location, we use a comman
 
 You should see a few folders. `ls` is not limited to just showing you what is in your current folder, it can also accept arguments of one or more paths to list the contents of. Try running the following command:
 
-```
+```bash
 $ ls assignments
 ```
 
@@ -122,4 +122,6 @@ This should list some files in the "assignments" folder. You can use either abso
 
 #### Manipulating files
 
-Everything we have done so far is passive, we haven't made any permanent changes to the system. Obviously to obtain data, save results, or generally accomplish anything, we need to make some changes. The shared folder you are in now is read-only, so that we can't break anything. Let's move back to your home folder
+Everything we have done so far is passive, we haven't made any permanent changes to the system. Obviously to obtain data, save results, or generally accomplish anything, we need to make some changes. The shared folder you are in now is read-only, so that we can't break anything. Let's move back to your home folder:
+
+```bash
