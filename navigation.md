@@ -1,0 +1,123 @@
+Although I'm sure most of you have some idea about the concepts of "files" or "folders" when it comes to computers, working with command-line programs will probably stretch anyone's intuition about how to talk about, describe, or use files and folders unless they have previously done CLI work.
+
+### Thinking about files and paths
+#### Paths
+
+CLI programs, like we will use, extensively use **paths** pointing to specific files or folders on the computer. A **file** is simply a chunk of data stored as a unit on the computer. The **filesystem** describes the software and information that organizes data on the computer into files stored in a particular way. For the most part, computers organize data files using a tree-like structure of nested **folders** or **directories**. This is where the analogy of files as pieces of paper stored in folders breaks down a little bit, as there is no limit to how "deeply nested" folders can be. You can have folders inside folders inside folders inside...
+
+![Nested Folders][nested_folders]
+
+[nested_folders]: images/0NestedFolders.webp "Nested Folders"
+
+Since we frequently need to tell a program to work with a particular file, we need a system or convention for describing where to find a particular file or folder. Since we don't have pop up windows that let us select a particular file and we work primarily with text, this will be a string of text! Think of a street address telling a postal worker how to find a particular house. This address needs to unambiguously describe the particular location as well as increasingly broader general locations.
+
+The solution to pointing to a particular file is what are called **paths**. These are appropriately named, because they describe the path to follow from a particular reference point through nested folders to get to the intended location. You have (probably) seen paths used on computers before even if you haven't particular thought about it. If you've used Windows you've almost certainly seen strings of text starting with `c:\` or similar. This is the start of a path!
+
+#### Absolute Paths
+
+A path like `c:\Program Files\Google\Google Chrome.exe` describes the path to take from the root of the filesystem on the "C drive" through a folder called "Program Files", into a second folder called "Google", and finally to a file called "Google Chrome.exe". This is what is known as an absolute path. Think of absolute paths as like complete addresses, even including the country! They specify exactly and unambiguously where to find a file. The address:
+
+```4094 Campus Dr
+College Park, MD 20742
+United States```
+
+unambigiously describes the Bio-Psych building on the UMD campus. You could give that address to anyone in the world with a map, and they should be able to find that building! On the other hand, if I was in College Park right now, talking to someone else in College Park, I might just tell them "4094 Campus Dr" and let them assume this refers to an address near our current location. They would probably have no trouble finding the Bio-Psych building.
+
+#### Relative Paths
+
+Now imagine we don't go far, just a few miles to the other side of Washington DC near Sterling, VA. If I told someone to go to "4094 Campus Dr" and they were in Sterling, they would probably end up at Northern Virginia Community College! This is because that incomplete address will probably be interpreted relative to the location of the reader. A second, frequently used type of path works this way called **relative paths**. Relative paths are relative to the so-called **working directory**.
+
+At any point, when we are working with the command line, I want you to think of yourself in cyberspace. You are in the computer! And you aren't just anywhere in the computer, you are in a very specific place in the computer, inside of one specific folder or directory in the tree of folders that is the filesystem. You are in a particular directory and around you are all the files or folders that are in that directory with you. Since you are in a folder there are more folders that exist further "up" in the direction of the folder that "contains" your current folder and there are more files and folders "down" "inside" the folders that are beside you. 
+
+If you simply write the name of a file while you are in a particular folder, the computer will interpret this as a path relative to your working directory where you "are". If you make a file in your current directory, you can refer to it just by name, but if you "move" somewhere else, you'll need to be more specific to refer to that file! 
+
+ Let's revisit that photo from earlier:
+
+![Nested Folderse][nested_folders]
+
+If we consider that we are "in" the `Books` folder as our current working directory, there are four folders in there with us, `The Phantom Tollbooth`, `Kite Runner`, `Hamlet` and `And Still I Rise`. We can refer to the Hamlet directory simply by writing `Hamlet`. Imagine however that you are working with someone else, and they aren't in the `Books` folder. Unless they go through the effort of looking and searching through this directory tree, they won't see a `Hamlet` folder. If you weren't sure where they were, you could specify `Things I Love` - `Books` - `Hamlet` and they would have no problem!
+
+#### Actually writing paths down
+
+Previously I mentioned c:\ as a special **path** pointing to the "root" of the C drive. This format is how Windows works, but not how anything else does! We will be using Linux, which like macOS, is based on Unix, and uses "Unix-style paths". In Unix paths, folders are separated by forward-slashes `/`. Instead of having a separate root for each drive (main drive, USB drive, network drives, etc), Unix systems have a single root directory for the entire computer, simply named `/`. For this reason, if you "start a path" with `/` you are starting at the root of the filesystem, making it an absolute path. If you start a path with (almost) anything else, it is *relative* to your current working directory. 
+
+- Absolute paths: start with / and must trace the entire path from the root directory to the desired file or folder
+- Relative paths: start with a name that is in the current working directory and must trace a path from the current directory to the desired file or folder
+
+There are three special symbols that you will need to know about besides /. These are ., .., and ~.
+
+- A `.` (one period) is a placeholder for the current directory. It can be used at the beginning or in the middle of a path and represents basically the status-quo, it doesn't move you anywhere. There are actually relatively few places we will want to use this symbol.
+- A `..` (two periods) represents the parent directory. This is how you go "upward" in the file tree. It can also be used anywhere in a path and represents the folder one step upwards from the current position in a path.
+- A `~` (a tilde, at the top-left of your keyboard) represents your home directory. This is a very special character since it is the only other way to create an absolute path. If you use the tilde at the beginning of a path, instead of starting in the root folder, it starts the path in your home directory. 
+  - Regardless of where you are, a path starting with `~` will always point to the same folder.
+  - Warning: The `~` represents the home folder, which is different for every user on a system. If you give a path to a teammate starting with `~`, this will represent a different location for them! For this reason when working in teams we will usually use a special shared directory outside of our home directories.
+
+If we assume that `Things I Love` is in the root directory of our hypothetical system, all of the following are true:
+
+- If we are currently in the Books folder:
+  - The path to the Kite Runner folder is simply `Kite Runner` (relative) but could be `/Things I Love/Books/Kite Runner` (absolute)
+  - We could also refer to the `Kite Runner` folder as `./Kite Runner` (relative)
+  - The path to the Things I Love folder could be written as `/Things I Love` (absolute) or `..` (relative)
+  - The path to the Cats folder could be written as `/Things I Love/Cats` (absolute) or `../Cats` (relative)
+- If we were currently in the Food folder:
+  - The path to the Kite Runner folder could be `../Books/Kite Runner` (relative) or `/Things I Love/Books/Kite Runner` (absolute, notice this is the same as before, because it is absolute!)
+  - The path to the Things I Love folder could be written as `/Things I Love` (absolute) or `..` (relative, Food and Books are "siblings" so they have the same parent!)
+  - The path to the Cats folder could be written as `/Things I Love/Cats` (absolute) or `../Cats` (relative, Food and Books are "siblings" so they have the same parent which contains Cats)
+- If we were in the Hamlet folder:
+  - The path to the Kite Runner folder could be `../Kite Runner` (relative) or `/Things I Love/Books/Kite Runner` (absolute, notice this is the same as before, because it is absolute!)
+  - The path to the Things I Love folder could be written as `/Things I Love` (absolute) or `../..` (relative, you need to move "up" twice!)
+  - The path to the Cats folder could be written as `/Things I Love/Cats` (absolute) or `../../Cats` (relative)
+
+You can see how both types of path might be more convenient in different circumstances. Relative paths are often shorter and easier when you are "close" to the intended target, while the further away you get the more complicated they become and the reliability and specificity of absolute paths becomes more useful!
+
+### Navigating a Filesystem with the CLI
+
+At this point, I recommend you complete the first Chapter of the Introduction to [Shell Datacamp Module](https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1). You must be registered for our DataCamp class for full access to these modules. You may do this instead of or in addition to reading the information in this section. To follow along with the commands in this section you should connect to compute-1.fire.tryps.in through SSH or another app like Termius or RStudio Server as described in [Getting Connected](https://umd.instructure.com/courses/1299512/pages/getting-connected-guide).
+
+#### Entering commands and basic navigation
+
+When you are logged into a shell, you should have a prompt. This is a line of text ending with a dollar symbol and a space $ . Many systems are configured to present more information on this prompt line for convenience. Our compute server by default shows the current user, the name of the system, and the current working directory! When you log in, you will see something like this on the last line:
+
+```
+jgoodson@compute-1:~$ 
+```
+
+This first tells you what use you are, in this case "jgoodson". This use is at/on/`@` a particular computer, in this case the server named "compute-1". The `:` separates this information from the **path** to the current working directory, which in this case is `~`, which you learned earlier is shorthand for your home directory.
+
+As a convention, throughout the rest of this training and future modules, I will tell you to run certain commands. I will format them like so:
+
+```
+$ pwd
+```
+
+This first $ indicates that this is at a shell prompt. You should not enter the `$ ` symbol, it will cause an error! 
+
+Go ahead and enter the `pwd` command. This stands for **p**rint **w**orking **d**irectory and will do what the name advertises, print your current position in the filesystem to the screen. In my case, it prints `/home/jgoodson`. This is my home folder and is what `~` represents for me. If at any point things aren't working like you expect, especially when providing paths to files you know exist, use `pwd` to find out if you are where you think you are.
+
+Since we've talked so much about being in a particular place, there must be a way to move around, to change where you are. The primary command for moving around on Unix systems is `c`d or change directory. This is a simple command that usually takes a single argument, a path where we want to move to. In this case, we should run the following command to move to a prepared toy directory that will be used for the rest of this section
+
+```
+$ cd /shared/module1
+```
+
+*Question: What kind of path is this?*
+
+At this point we are no longer in your home directory, and are instead in a shared directory with some toy files. So far we are moving blind, you had to take it on faith that this folder exists. If you try to move to a folder that doesn't exist, there will be an error. I encourage you to try to move to a random folder name now with `cd` and see what happens.
+
+To look around and see what files and folders are in a location, we use a command mentioned earlier: `ls`. Enter this command now to list the files and folders in your current directory.
+
+*Question: What files or folders were listed? What folder are these contained in?*
+
+You should see a few folders. `ls` is not limited to just showing you what is in your current folder, it can also accept arguments of one or more paths to list the contents of. Try running the following command:
+
+```
+$ ls assignments
+```
+
+This should list some files in the "assignments" folder. You can use either absolute or relative paths with `ls`.
+
+*Question: What is the absolute path to the assignments folder you just listed the contents of? How many files are there in this folder?*
+
+#### Manipulating files
+
+Everything we have done so far is passive, we haven't made any permanent changes to the system. Obviously to obtain data, save results, or generally accomplish anything, we need to make some changes. The shared folder you are in now is read-only, so that we can't break anything. Let's move back to your home folder
