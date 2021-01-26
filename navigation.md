@@ -46,7 +46,7 @@ Previously I mentioned c:\ as a special **path** pointing to the "root" of the 
 - Absolute paths: start with / and must trace the entire path from the root directory to the desired file or folder
 - Relative paths: start with a name that is in the current working directory and must trace a path from the current directory to the desired file or folder
 
-There are three special symbols that you will need to know about besides /. These are ., .., and ~.
+There are three special symbols that you will need to know about besides `/.` These are `.`, `..`, and `~`.
 
 - A `.` (one period) is a placeholder for the current directory. It can be used at the beginning or in the middle of a path and represents basically the status-quo, it doesn't move you anywhere. There are actually relatively few places we will want to use this symbol.
 - A `..` (two periods) represents the parent directory. This is how you go "upward" in the file tree. It can also be used anywhere in a path and represents the folder one step upwards from the current position in a path.
@@ -103,11 +103,11 @@ $ cd /shared/module1
 ```
 
 <details>
- <summary><i>Question: What kind of path is this?</i> </summary>
+ <summary><i>Question: What kind of path is this?</i> </summary><p>
  
  absolute
  
-</details>
+</p></details>
 
 At this point we are no longer in your home directory, and are instead in a shared directory with some toy files. So far we are moving blind, you had to take it on faith that this folder exists. If you try to move to a folder that doesn't exist, there will be an error. I encourage you to try to move to a random folder name now with `cd` and see what happens.
 
@@ -115,11 +115,11 @@ To look around and see what files and folders are in a location, we use a comman
 
 
 <details>
- <summary><i>Question: What files or folders were listed? What folder are these contained in?</i> </summary>
+ <summary><i>Question: What files or folders were listed? What folder are these contained in?</i> </summary><p>
  
  `/shared/module1/`
  
-</details>
+</p></details>
 
 You should see a few folders. `ls` is not limited to just showing you what is in your current folder, it can also accept arguments of one or more paths to list the contents of. Try running the following command:
 
