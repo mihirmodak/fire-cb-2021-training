@@ -102,13 +102,24 @@ Since we've talked so much about being in a particular place, there must be a wa
 $ cd /shared/module1
 ```
 
-*Question: What kind of path is this?*
+<details>
+ <summary><i>Question: What kind of path is this?</i> </summary>
+ 
+ absolute
+ 
+</details>
 
 At this point we are no longer in your home directory, and are instead in a shared directory with some toy files. So far we are moving blind, you had to take it on faith that this folder exists. If you try to move to a folder that doesn't exist, there will be an error. I encourage you to try to move to a random folder name now with `cd` and see what happens.
 
 To look around and see what files and folders are in a location, we use a command mentioned earlier: `ls`. Enter this command now to list the files and folders in your current directory.
 
-*Question: What files or folders were listed? What folder are these contained in?*
+
+<details>
+ <summary><i>Question: What files or folders were listed? What folder are these contained in?</i> </summary>
+ 
+ `/shared/module1/`
+ 
+</details>
 
 You should see a few folders. `ls` is not limited to just showing you what is in your current folder, it can also accept arguments of one or more paths to list the contents of. Try running the following command:
 
@@ -147,9 +158,7 @@ $ touch ~/module1/test_file2
 ```
 
 <details>
- <summary>
- *What command would you use to list the files you just made?*
- </summary>
+ <summary><i>Question: What command would you use to list the files you just made?</i> </summary>
  
  ```bash
  $ ls module1
