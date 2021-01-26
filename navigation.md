@@ -17,9 +17,11 @@ The solution to pointing to a particular file is what are called **paths**. The
 
 A path like `c:\Program Files\Google\Google Chrome.exe` describes the path to take from the root of the filesystem on the "C drive" through a folder called "Program Files", into a second folder called "Google", and finally to a file called "Google Chrome.exe". This is what is known as an absolute path. Think of absolute paths as like complete addresses, even including the country! They specify exactly and unambiguously where to find a file. The address:
 
-```4094 Campus Dr
+```
+4094 Campus Dr
 College Park, MD 20742
-United States```
+United States
+```
 
 unambigiously describes the Bio-Psych building on the UMD campus. You could give that address to anyone in the world with a map, and they should be able to find that building! On the other hand, if I was in College Park right now, talking to someone else in College Park, I might just tell them "4094 Campus Dr" and let them assume this refers to an address near our current location. They would probably have no trouble finding the Bio-Psych building.
 
@@ -33,7 +35,7 @@ If you simply write the name of a file while you are in a particular folder, the
 
  Let's revisit that photo from earlier:
 
-![Nested Folderse][nested_folders]
+![Nested Folders][nested_folders]
 
 If we consider that we are "in" the `Books` folder as our current working directory, there are four folders in there with us, `The Phantom Tollbooth`, `Kite Runner`, `Hamlet` and `And Still I Rise`. We can refer to the Hamlet directory simply by writing `Hamlet`. Imagine however that you are working with someone else, and they aren't in the `Books` folder. Unless they go through the effort of looking and searching through this directory tree, they won't see a `Hamlet` folder. If you weren't sure where they were, you could specify `Things I Love` - `Books` - `Hamlet` and they would have no problem!
 
