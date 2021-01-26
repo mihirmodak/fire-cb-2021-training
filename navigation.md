@@ -148,9 +148,7 @@ $ touch ~/module1/test_file2
 
 <details>
  <summary>
- 
  *What command would you use to list the files you just made?*
- 
  </summary>
  
  ```bash
