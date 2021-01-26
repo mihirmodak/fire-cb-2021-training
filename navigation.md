@@ -131,7 +131,7 @@ $ ls assignments
 <details>
  <summary><i>Question: What is the absolute path to the assignments folder you just listed the contents of? How many files are there in this folder?</i> </summary>
  
-`/shared/module1/assignments/`
+- /shared/module1/assignments/
  
 </details>
 
