@@ -34,6 +34,6 @@ This indicates a few things:
 
 I will re-emphasize that in most cases (I will try my best to be consistent in our training here) **square brackets indicate something you need to replace**. Square brackets have a advanced particular function in shell commands that we may or may not get to, you probably don't want them in your command for now!
 
-###Documentation
+### Documentation
 
 In general, any command we use in this stream will have good documentation available somewhere. If these are built-in or common commands, which we will learn about in the next part of this module, you can get the manual inside of the shell by using the man or "manual" command followed by the command name (as a parameter!). You can also find (as I usually do) these manuals on the internet just by googling the name of the command followed by "manual". Although your RE and PRMs are available to help, I can recommend learning to read command "man pages" as well as web searching the command and finding often-helpful pages on [Stack Overflow](https://stackoverflow.com/).
