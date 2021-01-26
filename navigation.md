@@ -88,7 +88,7 @@ This first tells you what use you are, in this case "jgoodson". This use is at/o
 
 As a convention, throughout the rest of this training and future modules, I will tell you to run certain commands. I will format them like so:
 
-```bash =
+```bash
 $ pwd
 ```
 
@@ -115,7 +115,9 @@ To look around and see what files and folders are in a location, we use a comman
 
 
 <details>
- <summary><i>Question: What files or folders were listed? What folder are these contained in?</i> </summary><p>
+ <summary><i>Question: What files or folders were listed? What folder are these contained in?</i> </summary>
+ 
+ <p>
  
  `/shared/module1/`
  
