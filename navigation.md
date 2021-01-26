@@ -117,11 +117,10 @@ To look around and see what files and folders are in a location, we use a comman
 <details>
  <summary><i>Question: What files or folders were listed? What folder are these contained in?</i> </summary>
  
- <p>
  
- `/shared/module1/`
+`/shared/module1/`
  
-</p></details>
+</details>
 
 You should see a few folders. `ls` is not limited to just showing you what is in your current folder, it can also accept arguments of one or more paths to list the contents of. Try running the following command:
 
@@ -129,11 +128,10 @@ You should see a few folders. `ls` is not limited to just showing you what is in
 $ ls assignments
 ```
 
-
 <details>
  <summary><i>Question: What is the absolute path to the assignments folder you just listed the contents of? How many files are there in this folder?</i> </summary>
  
- `/shared/module1/assignments/`
+`/shared/module1/assignments/`
  
 </details>
 
