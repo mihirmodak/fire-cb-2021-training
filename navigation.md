@@ -131,7 +131,7 @@ $ ls assignments
 <details>
  <summary><i>Question: What is the absolute path to the assignments folder you just listed the contents of? How many files are there in this folder?</i> </summary>
  
-- /shared/module1/assignments/
+`/shared/module1/assignments/`
  
 </details>
 
@@ -199,5 +199,42 @@ $ mv test_file3 module1
  
 </details>
 
+Imagine we did want to work with one of these files in our current folder, but didn't want to disrupt our organization. We actually do want `test_file2` in the current folder. We want to move a file into a current folder. We could provide a full absolute path to our current folder, perhaps with `~`, but we can also use the `.` placeholder to use our current working directory as the destination:
 
+```bash
+$ cp module1/test_file2 ./
+```
+
+Another common file manipulation you are probably familiar with with renaming files. We do not actually need a new command for this, one of our existing commands can do this job!
+
+<details>
+ <summary><i>Question: Which of the commands we've already learned could be used to rename files?</i> </summary>
  
+Using `mv` to move a file into the same folder it already is in, but with a different name, will accomplish renaming the file:
+
+```bash
+$ mv test_file2 renamed_test_file
+```
+
+</details>
+
+Finally, once we are done working with this file (assuming you renamed it to `renamed_test_file`, we can **delete** or "remove" it using another command: `rm`:
+
+```bash
+$ rm renamed_test_file
+```
+
+Be careful using `rm`, it does not have a recycle bin feature, once a file is deleted it is *gone*. For this reason, `rm` is especially wary of deleting folders. To delete a folder *and its contents* you need to add a parameter: `-r` for **r**ecursive:
+
+```bash
+$ rm -r module1
+```
+
+<details>
+ <summary><i>Question: How do you check whether you've successfully deleted the folder?</i> </summary>
+ 
+Use `ls` in the current folder and see if there is still a `module1` folder listed.
+
+</details>
+
+At this point, your home directory *should* be clean of all the files we created so far. If you had any trouble with this, please reach out to Dr. Goodson or one of your PRMs via Slack or email.
