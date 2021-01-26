@@ -1,6 +1,6 @@
 Although I'm sure most of you have some idea about the concepts of "files" or "folders" when it comes to computers, working with command-line programs will probably stretch anyone's intuition about how to talk about, describe, or use files and folders unless they have previously done CLI work.
 
-### Thinking about files and paths
+## Thinking about files and paths
 #### Paths
 
 CLI programs, like we will use, extensively use **paths** pointing to specific files or folders on the computer. A **file** is simply a chunk of data stored as a unit on the computer. The **filesystem** describes the software and information that organizes data on the computer into files stored in a particular way. For the most part, computers organize data files using a tree-like structure of nested **folders** or **directories**. This is where the analogy of files as pieces of paper stored in folders breaks down a little bit, as there is no limit to how "deeply nested" folders can be. You can have folders inside folders inside folders inside...
@@ -13,7 +13,7 @@ Since we frequently need to tell a program to work with a particular file, we ne
 
 The solution to pointing to a particular file is what are called **paths**. These are appropriately named, because they describe the path to follow from a particular reference point through nested folders to get to the intended location. You have (probably) seen paths used on computers before even if you haven't particular thought about it. If you've used Windows you've almost certainly seen strings of text starting with `c:\` or similar. This is the start of a path!
 
-#### Absolute Paths
+### Absolute Paths
 
 A path like `c:\Program Files\Google\Google Chrome.exe` describes the path to take from the root of the filesystem on the "C drive" through a folder called "Program Files", into a second folder called "Google", and finally to a file called "Google Chrome.exe". This is what is known as an absolute path. Think of absolute paths as like complete addresses, even including the country! They specify exactly and unambiguously where to find a file. The address:
 
@@ -25,7 +25,7 @@ United States
 
 unambigiously describes the Bio-Psych building on the UMD campus. You could give that address to anyone in the world with a map, and they should be able to find that building! On the other hand, if I was in College Park right now, talking to someone else in College Park, I might just tell them "4094 Campus Dr" and let them assume this refers to an address near our current location. They would probably have no trouble finding the Bio-Psych building.
 
-#### Relative Paths
+### Relative Paths
 
 Now imagine we don't go far, just a few miles to the other side of Washington DC near Sterling, VA. If I told someone to go to "4094 Campus Dr" and they were in Sterling, they would probably end up at Northern Virginia Community College! This is because that incomplete address will probably be interpreted relative to the location of the reader. A second, frequently used type of path works this way called **relative paths**. Relative paths are relative to the so-called **working directory**.
 
@@ -39,7 +39,7 @@ If you simply write the name of a file while you are in a particular folder, the
 
 If we consider that we are "in" the `Books` folder as our current working directory, there are four folders in there with us, `The Phantom Tollbooth`, `Kite Runner`, `Hamlet` and `And Still I Rise`. We can refer to the Hamlet directory simply by writing `Hamlet`. Imagine however that you are working with someone else, and they aren't in the `Books` folder. Unless they go through the effort of looking and searching through this directory tree, they won't see a `Hamlet` folder. If you weren't sure where they were, you could specify `Things I Love` - `Books` - `Hamlet` and they would have no problem!
 
-#### Actually writing paths down
+### Actually writing paths down
 
 Previously I mentioned c:\ as a special **path** pointing to the "root" of the C drive. This format is how Windows works, but not how anything else does! We will be using Linux, which like macOS, is based on Unix, and uses "Unix-style paths". In Unix paths, folders are separated by forward-slashes `/`. Instead of having a separate root for each drive (main drive, USB drive, network drives, etc), Unix systems have a single root directory for the entire computer, simply named `/`. For this reason, if you "start a path" with `/` you are starting at the root of the filesystem, making it an absolute path. If you start a path with (almost) anything else, it is *relative* to your current working directory. 
 
@@ -72,11 +72,11 @@ If we assume that `Things I Love` is in the root directory of our hypothetical 
 
 You can see how both types of path might be more convenient in different circumstances. Relative paths are often shorter and easier when you are "close" to the intended target, while the further away you get the more complicated they become and the reliability and specificity of absolute paths becomes more useful!
 
-### Navigating a Filesystem with the CLI
+## Navigating a Filesystem with the CLI
 
 At this point, I recommend you complete the first Chapter of the Introduction to [Shell Datacamp Module](https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1). You must be registered for our DataCamp class for full access to these modules. You may do this instead of or in addition to reading the information in this section. To follow along with the commands in this section you should connect to compute-1.fire.tryps.in through SSH or another app like Termius or RStudio Server as described in [Getting Connected](https://umd.instructure.com/courses/1299512/pages/getting-connected-guide).
 
-#### Entering commands and basic navigation
+### Entering commands and basic navigation
 
 When you are logged into a shell, you should have a prompt. This is a line of text ending with a dollar symbol and a space $ . Many systems are configured to present more information on this prompt line for convenience. Our compute server by default shows the current user, the name of the system, and the current working directory! When you log in, you will see something like this on the last line:
 
@@ -127,11 +127,15 @@ You should see a few folders. `ls` is not limited to just showing you what is in
 $ ls assignments
 ```
 
-This should list some files in the "assignments" folder. You can use either absolute or relative paths with `ls`.
 
-*Question: What is the absolute path to the assignments folder you just listed the contents of? How many files are there in this folder?*
+<details>
+ <summary><i>Question: What is the absolute path to the assignments folder you just listed the contents of? How many files are there in this folder?</i> </summary>
+ 
+ `/shared/module1/assignments/`
+ 
+</details>
 
-#### Manipulating files
+### Manipulating files
 
 Everything we have done so far is passive, we haven't made any permanent changes to the system. Obviously to obtain data, save results, or generally accomplish anything, we need to make some changes. The shared folder you are in now is read-only, so that we can't break anything. You should run any example code in the following code blocks. Let's move back to your home folder:
 
@@ -165,4 +169,35 @@ $ touch ~/module1/test_file2
  ```
  
 </details>
+
+We may also want to **copy** or **move** files around. We can do so with two commands: `cp` or `mv` respectively. (Are you getting an idea that old Unix authors were big fans of abbreviating words or phrases?)
+
+- `cp` requires at least two arguments. The first argument (or arguments) is a path (or paths) for the "source file(s)" which is/are to be copied. The second/last argument is the "destination" which can either be a path to a filename (if copying a file) or a folder. After running `cp` there will be a copy of the file in both locations.
+- `mv` works essentially the same way as `cp`, except that the file is moved and there will no longer be a copy in the original source location.
+
+Maybe we accidentally make a file in the current directory:
+
+```bash
+$ touch test_file3
+```
+
+but we really wanted it to be in the module1 folder. We could move this file to that folder with:
+
+```bash
+$ mv test_file3 module1
+```
+
+<details>
+ <summary><i>Question: What commands could you run to verify the file is now in the desired folder?</i> </summary>
+ 
+ ```bash
+ $ ls 
+ $ ls module1
+ ```
+ 
+ The first command would list files in the current folder, which should not contain `test_file3`. The second lists files in `module1`, which should now contain all three test files.
+ 
+</details>
+
+
  
