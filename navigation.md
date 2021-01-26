@@ -122,6 +122,36 @@ This should list some files in the "assignments" folder. You can use either abso
 
 #### Manipulating files
 
-Everything we have done so far is passive, we haven't made any permanent changes to the system. Obviously to obtain data, save results, or generally accomplish anything, we need to make some changes. The shared folder you are in now is read-only, so that we can't break anything. Let's move back to your home folder:
+Everything we have done so far is passive, we haven't made any permanent changes to the system. Obviously to obtain data, save results, or generally accomplish anything, we need to make some changes. The shared folder you are in now is read-only, so that we can't break anything. You should run any example code in the following code blocks. Let's move back to your home folder:
 
 ```bash
+$ cd ~
+```
+
+The simplest ways of creating files or folders are two commands which create empty files or empty folders, respetively: `touch` and `mkdir`. 
+ 
+- `touch` creates an empty file at the specified path. Think of this like putting an empty piece of paper into a folder.
+- `mkdir` creates a new empty folder at the specified path.
+
+With either touch or mkdir we need to provide a path as the argument. As always, this can be either an absolute or relative path. If you want to create a file or folder in the current directory, you simply give it the name you want!
+
+```bash
+$ mkdir module1
+```
+
+Whereas if you want to create a file inside a folder that you are not in, say, the module1 folder you just made, you provide a relative or absolute path:
+
+```bash
+$ touch module1/test_file1
+$ touch ~/module1/test_file2
+```
+
+<details>
+ <summary>*What command would you use to list the files you just made?*</summary>
+ 
+ ```bash
+ $ ls module1
+ ```
+ 
+</details>
+ 
