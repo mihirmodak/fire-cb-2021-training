@@ -94,7 +94,7 @@ Let's take a look at one comma-seperated values (.csv) file in our shared folder
 $ cat /shared/module1/people/firecb.csv
 ```
 
-This should print a comma-separated list of names and positions, everyone in our stream when I wrote this document. This is basically the same list you can find in Canvas in the People tab. This is reasonably readable for us humans and is also extremely convenient to use with a computer. There are many commands for programmatic manipulation of file contents that let use quickly and easily change even very large, complicated files that would takes ages to do by hand. We will learn more about these later. For now, I would like to try out the `cut` command. Unless `head` or `tail` which select only certain rows of a text file, `cut` allows you to output *certian columns*. 
+This should print a comma-separated list of names and positions, everyone in our stream when I wrote this document. This is basically the same list you can find in Canvas in the People tab. This is reasonably readable for us humans and is also extremely convenient to use with a computer. There are many commands for programmatic manipulation of file contents that let use quickly and easily change even very large, complicated files that would takes ages to do by hand. We will learn more about these later. For now, I would like to try out the `cut` command. Unless `head` or `tail` which select only certain rows of a text file, `cut` allows you to output *certain columns*. 
 
 To run `cut`, in addition to the file name, you need to specific two things:
 
