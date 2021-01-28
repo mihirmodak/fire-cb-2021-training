@@ -8,6 +8,8 @@ During a single run of the email program, you could, for example, both add a new
 
 Command-line programs generally do *one thing per execution*, and you tell the program what to do by *typing in the command-line* instead of pressing buttons in a program-specific graphical interface.  **This is both less convenient but potentially much more powerful.** 
 ### Anatomy of a Command
+<a href="url"><img src="https://github.com/saboriocole/fire-cb-2021-training/blob/main/images/CLI%20example.png" width="500" height="300" ></a>
+
 To run a command-line program, you need one or more things:
 
 - **An executable program or command to run.** Our example here will be `ls`, a command that lists files. By default, running `ls` lists the files in the current directory. You can find the manual for `ls` by running the command `man ls` or on a variety of websites: [https://man7.org/linux/man-pages/man1/ls.1.html](https://man7.org/linux/man-pages/man1/ls.1.html)
@@ -18,6 +20,7 @@ To run a command-line program, you need one or more things:
     - *Option parameters* provide information that modify an **option**. Some options have either optional or required parameters that can be provided. Our example, `ls`, for instance, has an option to color the filenames. This option is `--color`. This option optionally takes a parameter to specify when output should be colored, and can be "always", "auto", or "never". For `ls`, this option parameter is given by adding an equal symbol and then the parameter: `ls --color=always`. **Not all programs work exactly the same way, for some, the parameter is given by putting a space between the option and the parameter.** You can find out how to specify these parameters from instructions or the command manual.
 
 These different arguments are often combined in a variety of ways. **Options replace extensive and complicated menu systems in graphical programs, while parameters take the place of things like text boxes, tick boxes, etc.** We will be practicing using a variety of commands very soon.
+
 
 ### Common Notation
 
