@@ -6,7 +6,7 @@ You have all extensively used computers in your life, whether that is a traditio
 
 During a single run of the email program, you could, for example, both add a new contact and then edit their name. These programs have **state**: you do something and the program keeps that information in memory.   We will largely be working with **command-line programs** which operate on a drastically different paradigm.
 
-Command-line programs generally do *one thing per execution*, and you tell them what to do by *typing in the command line* instead of pressing buttions in a special window.  **This is both less convenient but potentially much more powerful.** 
+Command-line programs generally do *one thing per execution*, and you tell the program what to do by *typing in the command-line* instead of pressing buttons in a program-specific graphical interface.  **This is both less convenient but potentially much more powerful.** 
 ### Anatomy of a Command
 To run a command-line program, you need one or more things:
 
