@@ -19,7 +19,7 @@ To run a command-line program, you need one or more things:
     - *Positional parameters* that provide information directly to the command. For `ls`, positional parameters tell the command which folder to list files for, instead of the current folder. The command `ls my_folder` lists the files in a folder called "my_folder", not the files in the current directory.
     - *Option parameters* provide information that modify an **option**. Some options have either optional or required parameters that can be provided. Our example, `ls`, for instance, has an option to color the filenames. This option is `--color`. This option optionally takes a parameter to specify when output should be colored, and can be "always", "auto", or "never". For `ls`, this option parameter is given by adding an equal symbol and then the parameter: `ls --color=always`. **Not all programs work exactly the same way, for some, the parameter is given by putting a space between the option and the parameter.** You can find out how to specify these parameters from instructions or the command manual.
 
-These different arguments are often combined in a variety of ways. **Options replace extensive and complicated menu systems in graphical programs, while parameters take the place of things like text boxes, tick boxes, etc.** We will be practicing using a variety of commands very soon.
+These different arguments are often combined in a variety of ways. **Options replace extensive and complicated menu systems in graphical programs, while parameters take the place of things like text boxes and tick boxes.** We will be practicing using a variety of commands very soon.
 
 
 ### Common Notation
