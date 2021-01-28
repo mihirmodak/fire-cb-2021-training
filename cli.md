@@ -1,8 +1,10 @@
 ## Using the Command Line
 
 You have all extensively used computers in your life, whether that is a traditional desktop/laptop or just a smart phone. But so far, you've likely only interacted with computer programs through **graphical interfaces.** For example, you would use an email client program through a **graphical interface,** and select various options and buttons depending on what you wanted to do. 
+<p align="center">
+    <img src="https://github.com/saboriocole/fire-cb-2021-training/blob/main/images/GUI%20example.jpeg" >
+</p>
 
-![name-of-you-image](https://github.com/saboriocole/fire-cb-2021-training/blob/main/images/GUI%20example.jpeg)
 
 During a single run of the email program, you could, for example, both add a new contact and then edit their name. This is because these programs have **state**: you do something and the program keeps that information in memory.   We will largely be working with **command-line programs** which operate on a drastically different paradigm.
 
@@ -18,9 +20,14 @@ To run a command-line program, you need one or more things:
     - *Positional parameters* that provide information directly to the command. For `ls`, positional parameters tell the command which folder to list files for, instead of the current folder. The command `ls my_folder` lists the files in a folder called "my_folder", not the files in the current directory.
     - *Option parameters* provide information that modify an **option**. Some options have either optional or required parameters that can be provided. Our example, `ls`, for instance, has an option to color the filenames. This option is `--color`. This option optionally takes a parameter to specify when output should be colored, and can be "always", "auto", or "never". For `ls`, this option parameter is given by adding an equal symbol and then the parameter: `ls --color=always`. **Not all programs work exactly the same way, for some, the parameter is given by putting a space between the option and the parameter.** You can find out how to specify these parameters from instructions or the command manual.
 
-<a href="url"><img src="https://github.com/saboriocole/fire-cb-2021-training/blob/main/images/CLI%20example.png" width="500" height="300" ></a>
 
-These different arguments are often combined in a variety of ways. **Options replace extensive and complicated menu systems in graphical programs, while parameters take the place of things like text boxes and tick boxes.** We will be practicing using a variety of commands very soon.
+These different arguments are often combined in a variety of ways. **Options replace extensive and complicated menu systems in graphical programs, while parameters take the place of things like text boxes and tick boxes.** 
+
+<p align="center">
+<img src="https://github.com/saboriocole/fire-cb-2021-training/blob/main/images/CLI%20example.png" width="500" height="300" >
+</p>
+
+We will be practicing using a variety of commands very soon.
 
 
 ### Common Notation
