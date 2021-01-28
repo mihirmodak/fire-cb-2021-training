@@ -37,7 +37,7 @@ Let's look at each part of the command:
 - `ls`. This is the **command**.
 - `[OPTION]`. You would substitute whichever **options** you wish to use for this.
 - `...`. This is an ellipsis, and it means that you can specify multiple options sequentially, for instance: `ls -l -a`
-- `[FILE]...`. You may substitute in one or more filepaths at this position. These are **positional parameters.**
+- `[FILE]`. You may substitute in one or more filepaths at this position. These are **positional parameters.**
 The *order* of these elements is frequently important. **Many programs require that options be specified before the positional parameters.**
 
 
