@@ -96,7 +96,7 @@ This first $ indicates that this is at a shell prompt. You should not enter the 
 
 Go ahead and enter the `pwd` command. This stands for **p**rint **w**orking **d**irectory and will do what the name advertises, print your current position in the filesystem to the screen. In my case, it prints `/home/jgoodson`. This is my home folder and is what `~` represents for me. If at any point things aren't working like you expect, especially when providing paths to files you know exist, use `pwd` to find out if you are where you think you are.
 
-Since we've talked so much about being in a particular place, there must be a way to move around, to change where you are. The primary command for moving around on Unix systems is `c`d or change directory. This is a simple command that usually takes a single argument, a path where we want to move to. In this case, we should run the following command to move to a prepared toy directory that will be used for the rest of this section
+Since we've talked so much about being in a particular place, there must be a way to move around, to change where you are. The primary command for moving around on Unix systems is `cd` or change directory. This is a simple command that usually takes a single argument, a path where we want to move to. In this case, we should run the following command to move to a prepared toy directory that will be used for the rest of this section
 
 ```bash
 $ cd /shared/module1
