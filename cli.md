@@ -2,7 +2,7 @@
 
 You have all extensively used computers in your life, whether that is a traditional desktop/laptop or just a smart phone. But so far, you've likely only interacted with computer programs through **graphical interfaces.** For example, you would use an email client program through a **graphical interface,** and select various options and buttons depending on what you wanted to do. 
 <p align="center">
-    <img src="https://github.com/saboriocole/fire-cb-2021-training/blob/main/images/GUI%20example.jpeg" >
+    <img src="https://github.com/saboriocole/fire-cb-2021-training/blob/main/images/GUI%20example.jpeg" width="500" height="300">
 </p>
 
 
