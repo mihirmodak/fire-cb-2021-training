@@ -1,7 +1,5 @@
 Although I'm sure most of you have some idea about the concepts of "files" or "folders" when it comes to computers, working with command-line programs will probably stretch anyone's intuition about how to talk about, describe, or use files and folders unless they have previously done CLI work.
 
-<iframe src="https://umd.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=198cf321-f6f4-4f88-bc00-acc200e84ea6&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-
 ## Thinking about files and paths
 #### Paths
 
