@@ -4,6 +4,10 @@ So far you have learned how to move around a filesystem and how manipulate files
 
 ### Viewing file contents
 
+[Save time connecting with ssh](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f9ad098e-e5b5-4884-9623-acc20122030b)
+
+[![Watch the video "Working with File Contents"](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=71fb0191-d85a-4e12-b066-acc201220923)
+
 While there are some equivalents to "opening" a file on the command-line like you might open a text document in Notepad, TextEdit, or Word (or any other application), we will first focus on more traditional Unix tools for viewing and modifying file contents. 
 
 The simplest way to view the contents of a file is with the `cat` command. So far most of the commands have been more-plausibly abbreviated. `cat` is short for con**cat**enate. 
@@ -118,6 +122,8 @@ $ cut -d , -f 1,3 /shared/module1/people/firecb.csv
 
 
 ### Searching file contents
+
+[![Watch the video "Using grep"](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6c52acd5-8d4a-414f-9b14-acc2012203e5)
 
 The final tool we'll learn about in this section completes a missing set up the puzzle. We can create files, delete files, move them around, modify them both manually and programmatically, but how do we search through them? There are separate commands for searing for files themselves and searching through their contents. Here, we are going to focus on searching through specific files. We do this with an amazingly-powerful program called `grep`. `grep` is useful not only through the command line, tools that use the same search scheme are frequent in advanced text and code editing programs.
 

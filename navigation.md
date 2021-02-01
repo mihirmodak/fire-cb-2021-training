@@ -1,6 +1,6 @@
 Although I'm sure most of you have some idea about the concepts of "files" or "folders" when it comes to computers, working with command-line programs will probably stretch anyone's intuition about how to talk about, describe, or use files and folders unless they have previously done CLI work.
 
-[![Watch the video](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=198cf321-f6f4-4f88-bc00-acc200e84ea6)
+[![Watch the video "Filesystem Basics"](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=198cf321-f6f4-4f88-bc00-acc200e84ea6)
 
 ## Thinking about files and paths
 #### Paths
@@ -78,7 +78,7 @@ You can see how both types of path might be more convenient in different circums
 
 At this point, I recommend you complete the first Chapter of the Introduction to [Shell Datacamp Module](https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1). You must be registered for our DataCamp class for full access to these modules. You may do this instead of or in addition to reading the information in this section. To follow along with the commands in this section you should connect to compute-1.fire.tryps.in through SSH or another app like Termius or RStudio Server as described in [Getting Connected](https://umd.instructure.com/courses/1299512/pages/getting-connected-guide).
 
-[![Watch the video](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6878ab5e-70b1-4afa-a958-acc200ec37e7)
+[![Watch the video "Initial CLI"](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6878ab5e-70b1-4afa-a958-acc200ec37e7)
 
 
 ### Entering commands and basic navigation
@@ -141,6 +141,8 @@ $ ls assignments
 </details>
 
 ### Manipulating files
+
+[![Watch the video "Manipulating Files"](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b962a720-31c4-4904-a7b5-acc201220351)
 
 Everything we have done so far is passive, we haven't made any permanent changes to the system. Obviously to obtain data, save results, or generally accomplish anything, we need to make some changes. The shared folder you are in now is read-only, so that we can't break anything. You should run any example code in the following code blocks. Let's move back to your home folder:
 
@@ -222,6 +224,8 @@ $ mv test_file2 renamed_test_file
 ```
 
 </details>
+
+[![Watch the video "Deleting Files"](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b962a720-31c4-4904-a7b5-acc201220351)
 
 Finally, once we are done working with this file (assuming you renamed it to `renamed_test_file`, we can **delete** or "remove" it using another command: `rm`:
 

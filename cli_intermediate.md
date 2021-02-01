@@ -2,6 +2,8 @@
 
 Previously I promised you that there were some big advantages to command-line tools that leads to people actively using them decades after they were made when there are attractive, graphical alternatives. So far, we haven't really seen anything that can't be trivially done with tools you are more familiar with. That will change now. Like before, you may choose to follow this section here, [in DataCamp](https://campus.datacamp.com/courses/introduction-to-shell/combining-tools?ex=1), or both.
 
+[![Watch the video "Intermediate Input/Output"](images/emb_vid.png)](https://umd.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b5f627f3-2ba3-40ee-a40c-acc2012acf5f)
+
 ### Command input and output
 
 So far we have used commands in a way that only takes input from files and prints output to the screen. You may have heard me use the term **standard output**. At the core of Unix-style tools is a very structured system for managing input and output data. This system allows for us to use and combine tools in amazingly powerful ways. 
