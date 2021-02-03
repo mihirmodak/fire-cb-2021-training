@@ -3,18 +3,18 @@
         font-family: system-ui,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
     }
     div {
-        height: 200px;
-        width: 400px;
-        background: black;
-        
+
         position: fixed;
         top: 50%;
         left: 50%;
-        margin-top: -100px;
-        margin-left: -200px;
+        transform: translate(-50%, -50%);
+
     }
 
     </style>
+
+    <div>
+
     <h2>Manipulating file contents and data</h2>
 <p>So far you have learned how to move around a filesystem and how manipulate files and folders, but done nothing with the contents of those files. Its time to change that! You may choose to complete the <a href="https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1">DataCamp Chapter Manipulating Data</a> instead of or in addition to this section.</p>
 <h3>Viewing file contents</h3>
@@ -137,4 +137,4 @@ By default `grep` is **case-sensitive**, so you need to match and upper- or lowe
 <li><code>-n</code> prints the line number of the matches</li>
 <li><code>-v</code> prints the <strong>inverse</strong> of the match - only those lines that <em>don't</em> have the pattern in them</li>
 </ul>
-<p>If you had any trouble with this, please reach out to Dr. Goodson or one of your PRMs via Slack or email.</p>
+<p>If you had any trouble with this, please reach out to Dr. Goodson or one of your PRMs via Slack or email.</p></div>
