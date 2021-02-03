@@ -1,3 +1,4 @@
+<div>
 ## Manipulating file contents and data
 
 So far you have learned how to move around a filesystem and how manipulate files and folders, but done nothing with the contents of those files. Its time to change that! You may choose to complete the [DataCamp Chapter Manipulating Data](https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1) instead of or in addition to this section.
@@ -164,3 +165,4 @@ We will discuss the more advanced features of `grep` in the next major part of t
 
 
 If you had any trouble with this, please reach out to Dr. Goodson or one of your PRMs via Slack or email.
+</div>
